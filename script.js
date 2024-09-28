@@ -9,7 +9,6 @@ function scrollToSection(sectionId) {
 document.getElementById('editTeamForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  // Coleta os valores dos campos
   const name1 = document.getElementById('name1').value;
   const role1 = document.getElementById('role1').value;
   const name2 = document.getElementById('name2').value;
@@ -17,7 +16,6 @@ document.getElementById('editTeamForm').addEventListener('submit', function(even
   const name3 = document.getElementById('name3').value;
   const role3 = document.getElementById('role3').value;
 
-  // Logica de salvamento pode ser implementada aqui
   console.log('Membro 1:', name1, role1);
   console.log('Membro 2:', name2, role2);
   console.log('Membro 3:', name3, role3);
