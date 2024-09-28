@@ -1,3 +1,9 @@
+<?php
+
+include 'config.php'
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -16,7 +22,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Início</a></li>
+        <li><a href="index.php">Início</a></li>
       </ul>
     </nav>
   </header>

@@ -1,3 +1,9 @@
+<?php
+
+include 'config.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -21,7 +27,7 @@
         <li><a href="#services">Serviços</a></li>
         <li><a href="#team">Equipe</a></li>
         <li><a href="#contact">Contato</a></li>
-        <li><a href="team-edit.html">Editar Equipe</a></li>
+        <li><a href="team-edit.php">Editar Equipe</a></li>
       </ul>
     </nav>
   </header>
