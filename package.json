@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SofiaAraki/EmpresaJunior/issues"
   },
-  "homepage": "https://github.com/SofiaAraki/EmpresaJunior#readme"
+  "homepage": "https://github.com/SofiaAraki/EmpresaJunior#readme",
+  "dependencies": {
+    "firebase": "^10.14.1"
+  }
 }
