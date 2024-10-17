@@ -1,0 +1,19 @@
+{
+  "name": "empresajunior",
+  "version": "1.0.0",
+  "description": "Site para empresa júnior do curso de sistemas de informação",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofiaAraki/EmpresaJunior.git"
+  },
+  "author": "Sofia Araki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SofiaAraki/EmpresaJunior/issues"
+  },
+  "homepage": "https://github.com/SofiaAraki/EmpresaJunior#readme"
+}
