@@ -23,32 +23,35 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+  position: fixed; /* Mantém a navbar fixa na tela */
+  top: 0; /* Fixa no topo */
+  width: 100%; /* Garante que a navbar ocupe toda a largura da página */
+  z-index: 1000; /* Coloca a navbar à frente de outros elementos */
+  flex-wrap: wrap; /* Para melhor adaptação em telas pequenas */
 }
 
 .logo {
   display: flex;
-  align-items: center;
+  align-items: center; /* Alinha verticalmente a logo e o título */
 }
 
 .logo img {
   border-radius: 50%;
-  width: 60px;
+  width: 60px; /* Tamanho da logo */
   height: auto;
-  margin-right: 15px;
+  margin-right: 15px; /* Espaço entre a logo e o texto */
 }
 
 .logo h1 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Ajuste conforme necessário */
   margin: 0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os itens em telas menores */
   margin-right: 10px;
 }
 
@@ -74,39 +77,28 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* Menu lateral em telas pequenas */
+/* Estilos de Responsividade */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* Torna o menu hambúrguer visível em telas pequenas */
+    display: block; /* Torna o menu hamburguer visível em telas pequenas */
   }
 
   .nav-list {
     display: none; /* Esconde o menu por padrão */
     flex-direction: column;
-    background-color: #3d47b1;
-    position: fixed; /* Menu fixo na lateral */
-    top: 0;
-    right: -250px; /* Posicionado fora da tela inicialmente */
-    width: 250px; /* Largura fixa do menu lateral */
-    height: 100vh; /* Altura total da tela */
-    padding-top: 90px; /* Espaço para o header */
-    transition: right 0.3s ease; /* Animação suave ao abrir e fechar */
-    z-index: 999; /* Fica à frente de outros elementos */
+    background-color: #3d47b1; /* Cor de fundo do menu */
+    position: fixed; /* Alinha o menu fixo na tela */
+    top: 70px; /* Ajuste para ficar logo abaixo do header */
+    left: 0; /* Começa na borda esquerda da tela */
+    width: 100%; /* Largura total da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    justify-content: center; /* Centraliza verticalmente os itens */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    z-index: 1000; /* Garante que o menu fique na frente de outros elementos */
   }
 
   .nav-list.active {
-    right: 0; /* Quando ativado, traz o menu para a tela */
-  }
-
-  .nav-list li {
-    margin: 20px 0;
-  }
-
-  .nav-list li a {
-    padding: 10px 20px;
-    text-align: left; /* Alinhamento do texto à esquerda */
-    display: block;
-    color: #fff;
+    display: flex; /* Exibe o menu ao ativar */
   }
 
   .hero-section {
@@ -126,7 +118,7 @@ nav ul li a:hover {
   }
 
   .team-member img {
-    width: 80px;
+    width: 80px; /* Tamanho menor para melhorar a proporção em telas pequenas */
     height: 80px;
   }
 }
@@ -192,7 +184,7 @@ button:hover {
 
 .service-item,
 .team-member {
-  flex: 1 1 300px;
+  flex: 1 1 300px; /* Tamanho mínimo para responsividade */
   margin: 10px;
   padding: 20px;
   background: #fff;
