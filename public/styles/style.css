@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
+  margin-top: 90px; /* Pode ser ajustado conforme necessário */
 }
 
 header {
@@ -35,7 +35,7 @@ header {
 
 .logo img {
   border-radius: 40%;
-  width: 50px; /* Defina o tamanho da logo conforme necessário */
+  width: 50px; /* Tamanho da logo */
   height: auto;
   margin-right: 10px; /* Espaço entre a logo e o texto */
 }
@@ -109,7 +109,7 @@ button:hover {
 }
 
 .service-item, .team-member {
-  flex: 1 1 300px; /* Redefinição de tamanhos mínimos para responsividade */
+  flex: 1 1 300px; /* Tamanho mínimo para responsividade */
   margin: 10px;
   padding: 20px;
   background: #f9f9f9;
@@ -161,14 +161,6 @@ footer {
   cursor: pointer;
 }
 
-/* Menu hamburguer inicialmente oculto */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
 /* Estilo do menu lateral para dispositivos menores */
 @media (max-width: 768px) {
   nav ul {
@@ -196,18 +188,10 @@ footer {
   .menu-toggle {
     display: block; /* Mostra o menu hamburguer em telas pequenas */
   }
-}
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
+
   .edit-team-container {
     flex-direction: column;
     padding: 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
   }
 
   .hero-section {
@@ -231,6 +215,7 @@ footer {
   }
 }
 
+/* Responsividade para telas muito pequenas */
 @media (max-width: 480px) {
   .service-item, .team-member {
     flex: 1 1 100%; /* Itens ocupam 100% da largura em telas muito pequenas */
