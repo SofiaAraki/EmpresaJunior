@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  background: #171b49;
+  background: #222a80;
   color: rgb(255, 255, 255);
   padding: 1rem;
   display: flex;
@@ -65,8 +65,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: black;
-  border-bottom: 3px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 .hero-section {
@@ -79,22 +79,23 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   position: relative;
 }
 
 button {
-  background: #171b49;
+  background: #222a80;
   color: rgb(255, 255, 255);
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   transition: background 0.3s ease;
+  opacity: 100%;
 }
 
 button:hover {
-  background: #285a88;
+  opacity: 85%;
 }
 
 .about-section, .services-section, .team-section, .contact-section {
@@ -121,7 +122,7 @@ button:hover {
 }
 
 .service-item:hover, .team-member:hover {
-  border-bottom: 3px solid #171b49;
+  border-bottom: 3px solid #222a80;
 }
 
 .team-member img {
@@ -148,7 +149,7 @@ form input, form textarea {
 }
 
 footer {
-  background: #171b49;
+  background: #222a80;
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px;
@@ -173,7 +174,7 @@ footer {
     left: -250px;
     width: 250px;
     height: 100vh;
-    background-color: #171b49;
+    background-color: #222a80;
     padding-top: 60px;
     transition: left 0.3s ease;
   }
