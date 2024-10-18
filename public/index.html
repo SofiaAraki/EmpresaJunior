@@ -17,6 +17,10 @@
         <p>Sistemas de Informação</p>
       </div>
     </div>
+
+    <!-- Menu Hamburguer -->
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
     <nav>
       <ul>
         <li><a href="#home">Início</a></li>
@@ -92,7 +96,14 @@
   <footer>
     <p>&copy; 2024 Empresa Júnior de Sistemas de Informação. Todos os direitos reservados.</p>
   </footer>
-
+  
+  <script>
+    function toggleMenu() {
+      const navList = document.querySelector('.nav-list');
+      navList.classList.toggle('active');
+    }
+  </script>
+  
   <script>
     function scrollToSection(sectionId) {
       document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });

@@ -50,6 +50,7 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Centraliza os itens em telas menores */
+  margin-right: 10px;
 }
 
 nav ul li {
@@ -65,6 +66,14 @@ nav ul li a {
 nav ul li a:hover {
   color: black;
   border-bottom: 3px solid white;
+}
+
+/* Menu hamburguer inicialmente oculto */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 
 .hero-section {
@@ -150,6 +159,35 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: auto;
+}
+
+/* Estilo do menu lateral para dispositivos menores */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #3978bb;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+  }
+
+  nav ul.active {
+    left: 0; /* Quando o menu está ativo, ele aparece na tela */
+  }
+
+  nav ul li {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block; /* Mostra o menu hamburguer em telas pequenas */
+  }
 }
 
 /* Responsividade para telas menores */
