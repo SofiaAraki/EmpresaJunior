@@ -34,6 +34,7 @@ header {
 }
 
 .logo img {
+  
   width: 50px; /* Defina o tamanho da logo conforme necessário */
   height: auto;
   margin-right: 10px; /* Espaço entre a logo e o texto */
