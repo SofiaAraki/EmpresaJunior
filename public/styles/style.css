@@ -18,7 +18,7 @@ body {
 /* Estilos do Header */
 header {
   background: #3d47b1;
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -47,6 +47,11 @@ header {
   margin: 0;
 }
 
+nav {
+  display: flex;
+  flex-direction: column; /* Para adaptar em telas pequenas */
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -60,79 +65,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 5px 10px;
 }
 
 nav ul li a:hover {
-  border-bottom: 3px solid #fff;
-}
-
-/* Estilos do Menu Hambúrguer */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Estilos de Responsividade */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* Torna o menu hamburguer visível em telas pequenas */
-  }
-
-  .nav-list {
-    display: none; /* Esconde o menu por padrão */
-    flex-direction: column;
-    background-color: #3d47b1; /* Cor de fundo do menu */
-    position: fixed; /* Alinha o menu fixo na tela */
-    top: 70px; /* Ajuste para ficar logo abaixo do header */
-    left: 0; /* Começa na borda esquerda da tela */
-    width: 100%; /* Largura total da tela */
-    height: 100vh; /* Ocupa toda a altura da tela */
-    justify-content: center; /* Centraliza verticalmente os itens */
-    align-items: center; /* Centraliza horizontalmente os itens */
-    z-index: 1000; /* Garante que o menu fique na frente de outros elementos */
-  }
-
-  .nav-list.active {
-    display: flex; /* Exibe o menu ao ativar */
-  }
-
-  .hero-section {
-    padding: 50px 20px;
-    height: auto;
-  }
-
-  .services-container,
-  .team-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  button {
-    width: 100%;
-    max-width: 200px;
-  }
-
-  .team-member img {
-    width: 80px; /* Tamanho menor para melhorar a proporção em telas pequenas */
-    height: 80px;
-  }
-}
-
-/* Responsividade para telas muito pequenas */
-@media (max-width: 480px) {
-  .service-item,
-  .team-member {
-    flex: 1 1 100%; /* Itens ocupam 100% da largura em telas muito pequenas */
-  }
-
-  nav ul li {
-    margin-left: 10px;
-  }
+  color: rgb(255, 255, 255);
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 /* Estilos da Seção Hero */
@@ -146,14 +86,14 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: rgb(255, 255, 255);
   position: relative;
 }
 
 /* Estilos de Botão */
 button {
   background: #3d47b1;
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -172,12 +112,13 @@ button:hover {
 .contact-section {
   padding: 50px 20px;
   text-align: center;
+  color: rgb(0, 0, 0);
 }
 
 .services-container,
 .team-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Usando flex-wrap para garantir que os itens não se sobreponham em telas pequenas */
   justify-content: center;
   margin-top: 20px;
 }
@@ -187,7 +128,7 @@ button:hover {
   flex: 1 1 300px; /* Tamanho mínimo para responsividade */
   margin: 10px;
   padding: 20px;
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
@@ -226,8 +167,87 @@ form textarea {
 /* Estilos do Footer */
 footer {
   background: #3d47b1;
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px;
   margin-top: auto;
+}
+
+/* Estilos do Menu Hambúrguer */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: rgb(255, 255, 255); /* Alterado para melhor contraste */
+  cursor: pointer;
+}
+
+/* Estilos de Responsividade */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Torna o menu hamburguer visível em telas pequenas */
+  }
+
+  .nav-list {
+    display: none; /* Esconde o menu por padrão */
+    flex-direction: column;
+    background-color: #3d47b1; /* Cor de fundo do menu */
+    position: relative; /* Alinha o menu fixo na tela */
+    top: 70px; /* Ajuste para ficar logo abaixo do header */
+    left: 0; /* Começa na borda esquerda da tela */
+    width: 100%; /* Largura total da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    justify-content: center; /* Centraliza verticalmente os itens */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    z-index: 1000; /* Garante que o menu fique na frente de outros elementos */
+  }
+
+  .nav-list.active {
+    display: flex; /* Exibe o menu ao ativar */
+  }
+
+  nav ul {
+    display: none; /* Oculta o menu padrão inicialmente */
+    flex-direction: column; /* Para empilhar os itens na vertical */
+    width: 20%; /* Largura total em telas menores */
+    background-color: #3d47b1; /* Fundo para o menu quando ele aparecer */
+    position: relative; /* Para garantir que ele fique no topo */
+    top: 30px; /* Alinha o menu logo abaixo do header */
+  }
+
+  nav ul.active {
+    display: flex; /* Exibe o menu quando a classe 'active' for adicionada */
+  }
+
+  .hero-section {
+    padding: 50px 20px;
+    height: auto;
+  }
+
+  .services-container,
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .team-member img {
+    width: 80px; /* Tamanho menor para melhorar a proporção em telas pequenas */
+    height: 80px;
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  .service-item,
+  .team-member {
+    flex: 1 1 100%; /* Itens ocupam 100% da largura em telas muito pequenas */
+  }
+
+  nav ul li {
+    margin-left: 10px;
+  }
 }
