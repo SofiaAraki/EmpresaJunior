@@ -2,13 +2,6 @@
 
 import { analytics } from "./config/firebase-config";
 
-
-// Função para rolar a página até a seção correspondente
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  section.scrollIntoView({ behavior: 'smooth' });
-}
-
 document.getElementById('editTeamForm').addEventListener('submit', function(event) {
   event.preventDefault();
 

@@ -175,7 +175,7 @@ footer {
 
 /* Estilos do Menu Hambúrguer */
 .menu-toggle {
-  display: none;
+  display: flex;
   font-size: 30px;
   color: rgb(255, 255, 255); /* Alterado para melhor contraste */
   cursor: pointer;
@@ -187,19 +187,18 @@ footer {
     display: block; /* Torna o menu hamburguer visível em telas pequenas */
   }
 
-  nav {
-    display: none; /* Oculta o menu padrão */
+  nav ul {
+    display: none; /* Oculta o menu padrão inicialmente */
+    flex-direction: column; /* Para empilhar os itens na vertical */
+    width: 100%; /* Largura total em telas menores */
+    background-color: #3d47b1; /* Fundo para o menu quando ele aparecer */
+    position: absolute; /* Para garantir que ele fique no topo */
+    top: 60px; /* Alinha o menu logo abaixo do header */
   }
 
   nav ul.active {
-    display: flex; /* Mostra o menu quando a classe 'active' é adicionada */
-    flex-direction: column; /* Exibe os itens verticalmente */
-    background: #3d47b1; /* Cor de fundo do menu */
-    position: absolute; /* Para que fique acima de outros elementos */
-    top: 70px; /* Alinhado abaixo do header */
-    width: 100%; /* Largura total */
-    z-index: 1000; /* Mantém acima de outros elementos */
-  }  
+    display: flex; /* Exibe o menu quando a classe 'active' for adicionada */
+  }
 
   .hero-section {
     padding: 50px 20px;
