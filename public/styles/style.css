@@ -12,11 +12,12 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 90px; /* Pode ser ajustado conforme necessário */
+  
 }
 
 header {
-  background: #3978bb;
-  color: white;
+  background: #171b49;
+  color: rgb(255, 255, 255);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -58,14 +59,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 5px 10px;
 }
 
 nav ul li a:hover {
   color: black;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid rgb(0, 0, 0);
 }
 
 .hero-section {
@@ -78,13 +79,13 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgb(255, 255, 255);
   position: relative;
 }
 
 button {
-  background: #3978bb;
-  color: white;
+  background: #171b49;
+  color: rgb(255, 255, 255);
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -99,6 +100,7 @@ button:hover {
 .about-section, .services-section, .team-section, .contact-section {
   padding: 50px 20px;
   text-align: center;
+  color: rgb(0, 0, 0);
 }
 
 .services-container, .team-container {
@@ -112,14 +114,14 @@ button:hover {
   flex: 1 1 300px; /* Tamanho mínimo para responsividade */
   margin: 10px;
   padding: 20px;
-  background: #f9f9f9;
+  background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
 }
 
 .service-item:hover, .team-member:hover {
-  border-bottom: 3px solid #3978bb;
+  border-bottom: 3px solid #171b49;
 }
 
 .team-member img {
@@ -146,8 +148,8 @@ form input, form textarea {
 }
 
 footer {
-  background: #3978bb;
-  color: white;
+  background: #171b49;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px;
   margin-top: auto;
@@ -157,7 +159,7 @@ footer {
 .menu-toggle {
   display: none;
   font-size: 30px;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
@@ -171,7 +173,7 @@ footer {
     left: -250px;
     width: 250px;
     height: 100vh;
-    background-color: #3978bb;
+    background-color: #171b49;
     padding-top: 60px;
     transition: left 0.3s ease;
   }
