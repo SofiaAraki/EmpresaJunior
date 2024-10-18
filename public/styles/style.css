@@ -175,7 +175,7 @@ footer {
 
 /* Estilos do Menu Hambúrguer */
 .menu-toggle {
-  display: flex;
+  display: none;
   font-size: 30px;
   color: rgb(255, 255, 255); /* Alterado para melhor contraste */
   cursor: pointer;
@@ -190,9 +190,9 @@ footer {
   nav ul {
     display: none; /* Oculta o menu padrão inicialmente */
     flex-direction: column; /* Para empilhar os itens na vertical */
-    width: 100%; /* Largura total em telas menores */
+    width: 50%; /* Largura total em telas menores */
     background-color: #3d47b1; /* Fundo para o menu quando ele aparecer */
-    position: absolute; /* Para garantir que ele fique no topo */
+    position: relative; /* Para garantir que ele fique no topo */
     top: 60px; /* Alinha o menu logo abaixo do header */
   }
 
