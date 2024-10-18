@@ -19,19 +19,18 @@
     </div>
 
     <!-- Menu Hamburguer -->
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
 
-      <nav>
-        <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#team">Equipe</a></li>
-          <li><a href="#contact">Contato</a></li>
-          <li><a href="team-edit.html">Editar Equipe</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#team">Equipe</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li><a href="team-edit.html">Editar Equipe</a></li>
+      </ul>
+    </nav>
   </header>
   
 
@@ -97,15 +96,13 @@
   <footer>
     <p>&copy; 2024 Empresa Júnior de Sistemas de Informação. Todos os direitos reservados.</p>
   </footer>
-
+  
   <script>
     function toggleMenu() {
       const navList = document.querySelector('.nav-list');
       navList.classList.toggle('active');
     }
-  </script>
-  
-  <script>
+
     function scrollToSection(sectionId) {
       document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
     }
