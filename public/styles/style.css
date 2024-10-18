@@ -199,7 +199,7 @@ footer {
     top: 70px; /* Alinhado abaixo do header */
     width: 100%; /* Largura total */
     z-index: 1000; /* Mantém acima de outros elementos */
-  }
+  }  
 
   .hero-section {
     padding: 50px 20px;
