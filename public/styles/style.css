@@ -68,14 +68,6 @@ nav ul li a:hover {
   border-bottom: 3px solid white;
 }
 
-/* Menu hamburguer inicialmente oculto */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
 .hero-section {
   text-align: center;
   padding: 100px 20px;
@@ -161,6 +153,22 @@ footer {
   margin-top: auto;
 }
 
+/* Menu hamburguer inicialmente oculto */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu hamburguer inicialmente oculto */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
 /* Estilo do menu lateral para dispositivos menores */
 @media (max-width: 768px) {
   nav ul {
@@ -189,7 +197,6 @@ footer {
     display: block; /* Mostra o menu hamburguer em telas pequenas */
   }
 }
-
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .edit-team-container {

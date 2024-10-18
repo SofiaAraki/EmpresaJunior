@@ -22,7 +22,7 @@
     <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
 
     <nav>
-      <ul>
+      <ul class="nav-list">
         <li><a href="#home">Início</a></li>
         <li><a href="#about">Sobre</a></li>
         <li><a href="#services">Serviços</a></li>
@@ -99,9 +99,9 @@
   
   <script>
     function toggleMenu() {
-      const navList = document.querySelector('.nav-list');
-      navList.classList.toggle('active');
-    }
+    const navList = document.querySelector('.nav-list');
+    navList.classList.toggle('active');
+  }
 
     function scrollToSection(sectionId) {
       document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
