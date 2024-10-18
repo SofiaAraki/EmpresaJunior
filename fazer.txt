@@ -1,0 +1,8 @@
+fazer um sistema de login para editar os integrantes
+
+definir a logo e o nome
+
+formulario de contato
+
+estruturar a pagina
+

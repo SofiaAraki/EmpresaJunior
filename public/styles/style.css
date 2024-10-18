@@ -8,24 +8,47 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
 }
 
 header {
-  background: #007BFF;
+  background: #3978bb;
   color: white;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed; /* Mantém a navbar fixa na tela */
+  top: 0; /* Fixa no topo */
+  width: 100%; /* Garante que a navbar ocupe toda a largura da página */
+  z-index: 1000; /* Coloca a navbar à frente de outros elementos */
+  flex-wrap: wrap; /* Para melhor adaptação em telas pequenas */
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Alinha verticalmente a logo e o título */
+}
+
+.logo img {
+  width: 50px; /* Defina o tamanho da logo conforme necessário */
+  height: auto;
+  margin-right: 10px; /* Espaço entre a logo e o texto */
 }
 
 .logo h1 {
+  font-size: 1.5rem; /* Ajuste conforme necessário */
   margin: 0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os itens em telas menores */
 }
 
 nav ul li {
@@ -35,18 +58,17 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  padding: 5px 10px;
 }
 
 nav ul li a:hover {
-  color: rgb(0, 0, 0);
-  border-bottom: 3px solid rgb(255, 255, 255);
+  color: black;
+  border-bottom: 3px solid white;
 }
 
 .hero-section {
-  background: #f4f4f4;
   text-align: center;
   padding: 100px 20px;
-  background-image: url('./image/background.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -54,34 +76,22 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
   position: relative;
-  z-index: 1;
-  color: rgb(0, 0, 0);
-
-}
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  z-index: -1; 
 }
 
 button {
-  background: #007BFF;
+  background: #3978bb;
   color: white;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  position: relative;
-  z-index: 1;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background: #0056b3;
+  background: #285a88;
 }
 
 .about-section, .services-section, .team-section, .contact-section {
@@ -91,25 +101,23 @@ button:hover {
 
 .services-container, .team-container {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap; /* Usando flex-wrap para garantir que os itens não se sobreponham em telas pequenas */
+  justify-content: center;
   margin-top: 20px;
 }
 
 .service-item, .team-member {
-  flex: 1;
-  margin: 0 10px;
+  flex: 1 1 300px; /* Redefinição de tamanhos mínimos para responsividade */
+  margin: 10px;
   padding: 20px;
   background: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
+  text-align: center;
 }
 
-.service-item:hover {
-  border-bottom: 3px solid #007BFF;
-}
-
-.team-member:hover {
-  border-bottom: 3px solid #007BFF;
+.service-item:hover, .team-member:hover {
+  border-bottom: 3px solid #3978bb;
 }
 
 .team-member img {
@@ -123,10 +131,12 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
 }
 
 form input, form textarea {
-  width: 80%;
+  width: 100%;
+  max-width: 600px;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -134,8 +144,53 @@ form input, form textarea {
 }
 
 footer {
-  background: #007BFF;
+  background: #3978bb;
   color: white;
   text-align: center;
   padding: 20px;
+  margin-top: auto;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .edit-team-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .hero-section {
+    padding: 50px 20px;
+    height: auto;
+  }
+
+  .services-container, .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .team-member img {
+    width: 80px; /* Tamanho menor para melhorar a proporção em telas pequenas */
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item, .team-member {
+    flex: 1 1 100%; /* Itens ocupam 100% da largura em telas muito pequenas */
+  }
+
+  nav ul li {
+    margin-left: 10px;
+  }
 }
