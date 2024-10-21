@@ -1,20 +1,26 @@
 // script.js
 
-import { analytics } from "./config/firebase-config";
+import { analytics } from "./config/firebase-config.js";
 
-document.getElementById('editTeamForm').addEventListener('submit', function(event) {
+document.getElementById("contactForm").addEventListener("submit", function(event){
   event.preventDefault();
 
-  const name1 = document.getElementById('name1').value;
-  const role1 = document.getElementById('role1').value;
-  const name2 = document.getElementById('name2').value;
-  const role2 = document.getElementById('role2').value;
-  const name3 = document.getElementById('name3').value;
-  const role3 = document.getElementById('role3').value;
+  const name = document.getElementById("Nome").value;
+  const email = document.getElementById("Email").value;
+  const message = document.getElementById("Messagem").value;
 
-  console.log('Membro 1:', name1, role1);
-  console.log('Membro 2:', name2, role2);
-  console.log('Membro 3:', name3, role3);
-
-  alert('Alterações salvas com sucesso!');
+  // Salva os dados no Firestore
+  db.collection("Contato").add({
+    name: name,
+    email: email,
+    message: message,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+  })
+  .then(() => {
+    alert("Mensagem enviada com sucesso!");
+  })
+  .catch(error => {
+    alert("Erro ao enviar mensagem: " + error.message);
+  });
 });
+
