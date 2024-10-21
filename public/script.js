@@ -10,7 +10,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   const message = document.getElementById("Messagem").value;
 
   // Salva os dados no Firestore
-  db.collection("Contato").add({
+  db.collection("Contatos").add({
     name: name,
     email: email,
     message: message,
