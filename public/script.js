@@ -2,25 +2,13 @@
 
 import { analytics } from "./config/firebase-config.js";
 
-document.getElementById("contactForm").addEventListener("submit", function(event){
-  event.preventDefault();
+// Inicialize o Firebase Realtime Database
+const database = firebase.database();
 
-  const name = document.getElementById("Nome").value;
-  const email = document.getElementById("Email").value;
-  const message = document.getElementById("Menssagem").value;
-
-  // Salva os dados no Firestore
-  db.collection("Contatos").add({
-    name: name,
-    email: email,
-    message: message,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-  })
-  .then(() => {
-    alert("Mensagem enviada com sucesso!");
-  })
-  .catch(error => {
-    alert("Erro ao enviar mensagem: " + error.message);
-  });
+// Adicionar dados ao Realtime Database
+database.ref('Contatos').push({
+  name: Nome,
+  email: Email,
+  message: Menssagem,
+  timestamp: Date.now()
 });
-
