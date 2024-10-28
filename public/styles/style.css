@@ -89,10 +89,10 @@ nav ul li a:hover {
   position: relative;
   color: #ffffff;
   text-shadow:
-        -1px -1px 0 rgba(0, 0, 0, 1),
-         1px -1px 0 rgba(0, 0, 0, 1),
-        -1px  1px 0 rgba(0, 0, 0, 1),
-         1px  1px 0 rgba(0, 0, 0, 1);
+        -0.5px -0.5px 0 rgba(0, 0, 0, 0.5),
+         0.5px -0.5px 0 rgba(0, 0, 0, 0.5),
+        -0.5px  0.5px 0 rgba(0, 0, 0, 0.5),
+         0.5px  0.5px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos de Botão */
@@ -180,7 +180,7 @@ footer {
 
 /* Estilos do Menu Hambúrguer */
 .menu-toggle {
-  display: none;
+  display: contents;
   font-size: 30px;
   color: rgb(255, 255, 255); /* Alterado para melhor contraste */
   cursor: pointer;
@@ -199,8 +199,8 @@ footer {
     position: relative; /* Alinha o menu fixo na tela */
     top: 70px; /* Ajuste para ficar logo abaixo do header */
     left: 0; /* Começa na borda esquerda da tela */
-    width: 100%; /* Largura total da tela */
-    height: 100vh; /* Ocupa toda a altura da tela */
+    width: 0%; /* Largura total da tela */
+    height: 30vh; /* Ocupa toda a altura da tela */
     justify-content: center; /* Centraliza verticalmente os itens */
     align-items: center; /* Centraliza horizontalmente os itens */
     z-index: 1000; /* Garante que o menu fique na frente de outros elementos */
