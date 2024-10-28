@@ -86,8 +86,13 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(255, 255, 255);
   position: relative;
+  color: #ffffff;
+  text-shadow:
+        -1px -1px 0 rgba(0, 0, 0, 1),
+         1px -1px 0 rgba(0, 0, 0, 1),
+        -1px  1px 0 rgba(0, 0, 0, 1),
+         1px  1px 0 rgba(0, 0, 0, 1);
 }
 
 /* Estilos de Botão */
