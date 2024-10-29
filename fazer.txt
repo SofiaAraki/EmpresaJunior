@@ -1,8 +1,0 @@
-fazer um sistema de login para editar os integrantes - 
-
-definir a logo e o nome - ok
-
-formulario de contato - ok
-
-estruturar a pagina 
-
