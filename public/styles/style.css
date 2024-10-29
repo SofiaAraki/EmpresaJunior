@@ -185,7 +185,7 @@ footer {
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 70px;
+    top: 90px;
     left: 0;
     background-color: #3d47b1;
     z-index: 1000;
@@ -223,6 +223,17 @@ footer {
   .service-item,
   .team-member {
     flex: 1 1 100%;
+  }
+
+  nav ul {
+    display: none; /* Oculta o menu principal por padrão */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    background-color: #3d47b1;
+    z-index: 1000;
   }
 
   nav ul li {
