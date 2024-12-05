@@ -60,7 +60,7 @@
           <input type="file" id="image3" accept="image/*">
         </div>
 
-        <button type="submit">Salvar Alterações</button>
+        <button type="submit" onclick={addMember()}>Salvar Alterações</button>
       </form>
     </div>
   </section>
@@ -70,6 +70,33 @@
   </footer>
 
   <script>
+    membros = [];
+
+    function addMember() {
+      const name = document.getElementById('name').value;
+      const cargo = document.getElementById('cargo').value;
+      const imagem = document.getElementById('image').files[0];
+
+      membros.push({ name, cargo, imagem });
+
+      // Limpar os campos após adicionar o membro
+      document.getElementById('name').value = '';
+      document.getElementById('cargo').value = '';
+      document.getElementById('image').value = '';
+
+      // Atualizar a lista de membros na página
+      updateMemberList();
+    }
+
+    function updateMemberList() {
+      const memberList = document.getElementById('memberList');
+      memberList.innerHTML = '';
+
+      membros.forEach((member, index) => {
+        
+      })
+    }
+
     function toggleMenu() {
       const navList = document.querySelector('.nav-list');
       navList.classList.toggle('active');
